@@ -1,0 +1,41 @@
+<ion-view view-title="Autor">
+  <ion-content  class="padding">
+    <center>
+    <img style="  border-radius:50%; width: 40%; height: 40%; "  src ="/img/ben.png" > </img> </center>
+    
+    <div class="card">
+  <div class="item item-divider">
+    Dasarrollador
+  </div>
+  <div class="item item-text-wrap">
+    {{autor.name}} <br>
+  </div>
+</div>
+<div class="list card">
+
+  <a href="#" class="item item-icon-left">
+    <i class="icon ion-card"></i>
+   <b>Carnet: </b>{{autor.id}}
+  </a>
+
+  <a href="mailto:{{autor.email}}" class="item item-icon-left">
+    <i class="icon ion-email"></i>
+   <b> Correo: </b>{{autor.email}}
+</a>
+
+ <a href="tel:(503) 0000-0000" class="item item-icon-left">
+    <i class="icon ion-social-github"></i>
+   <b>Github:</b> {{autor.git}}
+  </a>
+
+
+
+  <a href="tel:(503) 0000-0000" class="item item-icon-left">
+    <i class="icon ion-ios-telephone"></i>
+   <b>Telefóno:</b> {{autor.phone}}
+  </a>
+
+</div>
+
+  </ion-content>
+</ion-view>
