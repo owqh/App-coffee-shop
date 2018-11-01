@@ -2,6 +2,18 @@ angular.module('starter.controllers', [])
 
 //Home
 .controller('DashCtrl', function($scope) {})
+//Home
+.controller('loginCtrl', function($scope) {
+  $scope.loginData={};
+
+  $scope.sendInfo =function (){
+    var user = $scope.loginData.user;
+    var password = $scope.loginData.ps;
+
+    console.log(user +" tu mama es "+ password)
+  }
+})
+
 //Autor
 .controller('autorCtrl', function($scope) {
       $scope.autor = {

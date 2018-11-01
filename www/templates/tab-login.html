@@ -1,0 +1,24 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+  	<center>
+    <img style="  border-radius:50%; width: 40%; height: 40%; "  src ="/img/icon.png" > </img>
+    <h3>Inicia sesión en Coffee Folks</h3> </center>
+
+  	<form ng-submit='sendInfo();' id="login" name="login">
+  	<div class="list">
+	  <label class="item item-input">
+	    <span class="input-label">Usuario</span>
+	    <input type="text" id="user" name="user" ng-model="loginData.user">
+	  </label>
+	  <label class="item item-input">
+	    <span class="input-label">Password</span>
+	    <input type="password" id="ps" name="ps" ng-model="loginData.ps">
+	  </label>
+	  <button class="button button-block button-positive" type="submit" id="btn" name="btn" ng-model="btn">
+	  Iniciar sesión 
+	</button>	
+	</div>
+	</form>
+
+  </ion-content>
+</ion-view>
