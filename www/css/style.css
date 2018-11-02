@@ -1,1 +1,55 @@
-/* Empty. Add your own CSS if you like */
+body {
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+  }
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    /*vertical-align: middle;*/
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.has-error .form-control {
+    border-color: #ef473a;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+.has-errors {
+    border-bottom: 3px solid #E44B03;
+}
+
+.no-errors {
+    border-bottom: 3px solid #2B76DB;
+}
+
+.help-block {
+    display: block;
+    color: #737373;
+    margin: 10px;
+}
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline {
+    margin: 10px;
+    color: #ef473a;
+}
+
+.rcorners {
+    border-radius: 50%;
+    border: 2px solid #FFFFFFAA;     
+    width: 150px;
+    height: 150px;    
+}
+

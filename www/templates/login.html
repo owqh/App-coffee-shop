@@ -4,34 +4,36 @@
 	    <img style="  border-radius:50%; width: 40%; height: 40%; "  src ="/img/icon.png" > </img>
 	    <h3>Inicia sesión en Coffee Folks</h3> 
 	</center>
-
-  	<form ng-submit='sendInfo();' id="login" name="login">
+	<!-- Formulario -->
+	  	<form ng-submit='doLogin();' id="login" name="login">
 	  	<div class="list">
-		  	<div ng-class="{'has-error': login.user.$invalid && !login.user.$pristime}">
-			  <label class="item item-input" ng-class="{'has-error': login.user.$invalid && !login.user.$pristime, 'no-errors': login.user.$valid}">
+		  	<div ng-class="{'has-error': login.user.$invalid && !login.user.$pristine}">
+			  <label class="item item-input" ng-class="{'has-error': login.user.$invalid && !login.user.$pristine, 'no-errors': login.user.$valid}">
 			    <span class="input-label">Usuario</span>
 			    <input type="text" id="user" name="user" ng-model="loginData.user" required>
 			  	</label>
-			  	<p ng-show="login.user.$invalid && !login.user.$pristime" class="help-block"><i class="ion-information-circled"></i>
+			  	<p ng-show="login.user.$invalid && !login.user.$pristine" class="help-block"><i class="ion-information-circled"></i>
 			  		Se requiere un valor
 			  	</p>
 			  </div>
-			  <div ng-class="{'has-error': login.ps.$invalid && !login.ps.$pristime}">
-			  <label class="item item-input" ng-class="{'has-error': login.ps.$invalid && !login.ps.$pristime, 'no-errors': login.ps.$valid}">
+			  <div ng-class="{'has-error': login.ps.$invalid && !login.ps.$pristine}">
+			  <label class="item item-input" ng-class="{'has-error': login.ps.$invalid && !login.ps.$pristine, 'no-errors': login.ps.$valid}">
 			    <span class="input-label">Password</span>
 			    <input type="password" id="ps" name="ps" ng-model="loginData.ps" required>
 			  </label>
-			  <p ng-show="login.ps.$invalid && !login.ps.$pristime" class="help-block"><i class="ion-information-circled"></i>
+			  <p ng-show="login.ps.$invalid && !login.ps.$pristine" class="help-block"><i class="ion-information-circled"></i>
 			  		Se requiere un valor
 			  	</p>
 			  </div>
-
+			  <!-- Boton para envio de formulario -->
 		  <button class="button button-block button-positive" type="submit" id="btn" name="btn" ng-model="btn" ng-disabled='login.$invalid'>
 		 Iniciar sesión  <i class="ion-log-in"></i> 
 		</button>
 
 		</div>
 	</form>
-
+	<!-- /Formulario -->
   </ion-content>
 </ion-view>
+
+ 	

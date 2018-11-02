@@ -1,16 +1,34 @@
-angular.module('starter.controllers', [])
+﻿angular.module('starter.controllers', [])
 
 //Home
 .controller('DashCtrl', function($scope) {})
-//Home
-.controller('loginCtrl', function($scope) {
+//Login
+.controller('loginCtrl', function($scope, $ionicPopup, $state) {
   $scope.loginData={};
 
-  $scope.sendInfo =function (){
+  $scope.doLogin =function (){
     var user = $scope.loginData.user;
     var password = $scope.loginData.ps;
 
-    console.log(user +" tu mama es "+ password)
+    //Validacion de Formulario de incio de sesion
+    if (user == 'admin' && password == 'admin') {
+      $state.go('tab.dash');
+       console.log('El usuario es: '+user+' La contraseña es: ' +password);
+    } 
+    else {
+
+         var alertPopup = $ionicPopup.alert({
+         title: 'Información',
+         template: 'Usuario o clave no son validos.',
+         okText: 'Aceptar'
+          });
+         $state.go('login'); //redireccion a login
+    }
+
+
+   alertPopup.then(function(res) {
+     console.log('El usuario es: '+user+' La contraseña es: ' +password);
+   });
   }
 })
 
